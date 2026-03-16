@@ -1,0 +1,178 @@
+.about-section {
+  background-color: var(--bg-primary);
+  position: relative;
+}
+
+.about-header {
+  max-width: 600px;
+  margin-bottom: 4rem;
+}
+
+.about-header .section-title {
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.about-description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.timeline-container {
+  position: relative;
+  margin-top: 3rem;
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 2rem;
+  scrollbar-width: none; /* Firefox */
+}
+
+.timeline-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 1500px; /* arbitrary large width to cover cards */
+  height: 1px;
+  background: var(--border-color);
+  z-index: 0;
+}
+
+.timeline-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.timeline-card {
+  padding: 2rem;
+  border-radius: 1rem;
+  background: rgba(19, 26, 42, 0.8);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 0.75rem;
+  background: rgba(255,255,255,0.05);
+}
+
+.card-year {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.card-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Card Specific Theme Colors */
+/* Card Specific Theme Colors */
+.card-blue {
+  background: linear-gradient(to bottom, rgba(30,58,138,0.2) 0%, var(--glass-bg) 100%);
+  border-color: rgba(59,130,246,0.2);
+}
+.card-blue .card-icon {
+  color: var(--card-blue-light);
+  background: rgba(59,130,246,0.1);
+}
+
+.card-orange {
+  background: linear-gradient(to bottom, rgba(120,53,15,0.2) 0%, var(--glass-bg) 100%);
+  border-color: rgba(245,158,11,0.2);
+}
+.card-orange .card-icon {
+  color: var(--card-orange-light);
+  background: rgba(245,158,11,0.1);
+}
+
+.card-green {
+  background: linear-gradient(to bottom, rgba(6,78,59,0.2) 0%, var(--glass-bg) 100%);
+  border-color: rgba(16,185,129,0.2);
+}
+.card-green .card-icon {
+  color: var(--card-green-light);
+  background: rgba(16,185,129,0.1);
+}
+
+.card-purple {
+  background: linear-gradient(to bottom, rgba(76,29,149,0.2) 0%, var(--glass-bg) 100%);
+  border-color: rgba(168,85,247,0.2);
+}
+.card-purple .card-icon {
+  color: var(--card-purple-light);
+  background: rgba(168,85,247,0.1);
+}
+
+/* Light Theme Overrides (Solid Backgrounds per screenshot) */
+[data-theme='light'] .card-blue {
+  background-color: var(--card-blue);
+  border: 1px solid rgba(59,130,246,0.2);
+}
+
+[data-theme='light'] .card-orange {
+  background-color: var(--card-orange);
+  border: 1px solid rgba(245,158,11,0.2);
+}
+
+[data-theme='light'] .card-green {
+  background-color: var(--card-green);
+  border: 1px solid rgba(16,185,129,0.2);
+}
+
+[data-theme='light'] .card-purple {
+  background-color: var(--card-purple);
+  border: 1px solid rgba(168,85,247,0.2);
+}
+
+@media (max-width: 768px) {
+  .timeline-container {
+    overflow-x: hidden; /* Prevent horizontal scroll on mobile since they stack */
+    padding: 1rem 0 2rem 0;
+  }
+
+  .timeline-line {
+    display: none; /* Hide horizontal line on mobile */
+  }
+
+  .timeline-cards {
+    grid-template-columns: 1fr; /* Stack cards vertically */
+    gap: 1.5rem; /* Maintain gap between stacked cards */
+  }
+
+  .timeline-card {
+    height: auto; /* Allow card to natural height based on content */
+  }
+}

@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Colors */
+  --bg-primary: #0b0f19;
+  --bg-secondary: #131a2a;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent-primary: #f59e0b;
+  --accent-hover: #d97706;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(19, 26, 42, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.05);
+  
+  --nav-bg: rgba(19, 26, 42, 0.6);
+  --nav-border: rgba(255, 255, 255, 0.05);
+
+  --chat-btn-bg: #f59e0b;
+  --chat-btn-text: #000;
+  --btn-secondary-bg: #131a2a;
+  --btn-secondary-text: #f8fafc;
+
+  /* Card Accents */
+  --card-blue: #1e3a8a;
+  --card-blue-light: #3b82f6;
+  --card-purple: #4c1d95;
+  --card-purple-light: #a855f7;
+  --card-green: #064e3b;
+  --card-green-light: #10b981;
+  --card-orange: #78350f;
+  --card-orange-light: #f59e0b;
+
+  /* Typography */
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+  /* Layout */
+  --max-width: 1200px;
+  --nav-height: 80px;
+}
+
+:root[data-theme='light'] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --accent-primary: #f59e0b;
+  --accent-hover: #d97706;
+  --border-color: rgba(0, 0, 0, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(0, 0, 0, 0.03);
+
+  --nav-bg: transparent;
+  --nav-border: transparent;
+
+  --chat-btn-bg: #0f172a;
+  --chat-btn-text: #ffffff;
+  --btn-secondary-bg: #0f172a;
+  --btn-secondary-text: #ffffff;
+
+  /* Card Accents */
+  --card-blue: #f0fdfa; /* pale cyan */
+  --card-purple: #faf5ff;
+  --card-green: #ecfdf5;
+  --card-orange: #fff7ed;
+  
+  --card-blue-light: #06b6d4;
+  --card-purple-light: #a855f7;
+  --card-green-light: #10b981;
+  --card-orange-light: #f59e0b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-secondary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-color);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+button {
+  font-family: var(--font-main);
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* Utilities */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 6rem 0;
+}
+
+.section-label {
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+}
+
+/* Layout helpers */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Modern Gradient background effect */
+.bg-gradient-radial {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(30, 58, 138, 0.05) 0%, rgba(11, 15, 25, 0) 50%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+:root[data-theme='light'] .bg-gradient-radial {
+  display: none; /* Hide background gradient in light mode for pure white focus */
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 0;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .container {
+    padding: 0 1.5rem;
+  }
+}

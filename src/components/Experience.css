@@ -1,0 +1,147 @@
+.experience-section {
+  background-color: var(--bg-primary);
+}
+
+.experience-container {
+  max-width: 900px;
+}
+
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 2rem;
+  position: relative;
+  padding-bottom: 4rem;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-item:last-child .marker-line {
+  display: none;
+}
+
+.timeline-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.marker-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  flex-shrink: 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Base icon colors */
+.icon-bg-orange { color: #f97316; }
+.icon-bg-purple { color: #d946ef; }
+.icon-bg-blue   { color: #3b82f6; }
+
+.marker-line {
+  width: 1px;
+  flex-grow: 1;
+  background-color: var(--border-color);
+  margin-top: 1rem;
+}
+
+.timeline-content {
+  flex-grow: 1;
+  padding-top: 0.5rem;
+}
+
+.exp-header {
+  margin-bottom: 1.5rem;
+}
+
+.exp-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.exp-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.75rem;
+  border-radius: 1rem;
+}
+
+.tag-orange { background: rgba(245, 158, 11, 0.1); color: #f59e0b; }
+.tag-purple { background: rgba(217, 70, 239, 0.1); color: #d946ef; }
+.tag-blue   { background: rgba(59, 130, 246, 0.1); color: #3b82f6; }
+
+.exp-date {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-family: monospace;
+}
+
+.exp-role {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.02em;
+}
+
+.exp-company {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.exp-department {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-style: italic;
+  margin-top: 0.2rem;
+}
+
+.exp-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.bullet-icon {
+  color: var(--accent-primary);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.bullet-item span {
+  font-size: 0.95rem;
+  color: var(--text-secondary); /* slightly lighter than text-secondary in dark mode if needed, but standard text-secondary matches light mode well */
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    gap: 1rem;
+  }
+}
