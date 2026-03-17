@@ -35,14 +35,17 @@ const Navbar = () => {
           <a href="#work" className="nav-link">Work</a>
           <a href="#skills" className="nav-link">Skills</a>
           <a href="#contact" className="nav-link">Contact</a>
+        </div>
+
+        <div className="header-actions">
           <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme">
             {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
           </button>
+          
+          <button className="mobile-menu-btn" onClick={toggleMenu} aria-label="Toggle Menu">
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
-
-        <button className="mobile-menu-btn" onClick={toggleMenu} aria-label="Toggle Menu">
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
       </div>
 
       {isMobileMenuOpen && (

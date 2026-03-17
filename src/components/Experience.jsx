@@ -1,5 +1,7 @@
 import React from 'react';
 import { Home, Briefcase, Building, ChevronRight } from 'lucide-react';
+import hdLogo from '../assets/hd-logo2.jpg';
+import zsLogo from '../assets/zs-logo2.png';
 import './Experience.css';
 
 const Experience = () => {
@@ -12,7 +14,7 @@ const Experience = () => {
       date: 'Oct 2024 – Present',
       tag: 'Product Management',
       tagColor: 'tag-orange',
-      icon: <Home size={20} />,
+      icon: <img src={hdLogo} alt="Home Depot" className="brand-logo" />,
       iconBg: 'icon-bg-orange',
       bullets: [
         'Central lead for the operational strategy of a 1.5B annual transactional GenAI/Automation ecosystem, acting as the primary POC for global vendor partnerships and workforce scalability',
@@ -30,7 +32,7 @@ const Experience = () => {
       date: 'Sep 2022 – Oct 2024',
       tag: 'Product Management',
       tagColor: 'tag-orange',
-      icon: <Home size={20} />,
+      icon: <img src={hdLogo} alt="Home Depot" className="brand-logo" />,
       iconBg: 'icon-bg-orange',
       bullets: [
         'Responsible for the end-to-end delivery of high-value GenAI and ML products, focusing on vendor evaluation, model observability, and operational efficiency across the enterprise',
@@ -48,7 +50,7 @@ const Experience = () => {
       date: 'Aug 2021 – Sep 2022',
       tag: 'Consulting',
       tagColor: 'tag-purple',
-      icon: <Briefcase size={20} />,
+      icon: <img src={zsLogo} alt="ZS Associates" className="brand-logo" />,
       iconBg: 'icon-bg-purple',
       bullets: [
         'Helping Emerging Pharma Clients and Life Sciences Clients to design and manage enterprise-grade B2B technology solutions, enhance data-centric business processes using thoughtful and refined user experiences',
@@ -78,6 +80,11 @@ const Experience = () => {
   return (
     <section id="experience" className="section experience-section">
       <div className="container experience-container">
+
+        <div style={{ marginBottom: '3rem' }}>
+          <span className="section-label">EXPERIENCE</span>
+          <h2 className="section-title" style={{ marginBottom: 0 }}>Where I've made impact.</h2>
+        </div>
 
         <div className="experience-timeline">
           {experiences.map((exp) => (

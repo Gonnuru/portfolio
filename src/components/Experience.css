@@ -16,11 +16,18 @@
   display: flex;
   gap: 2rem;
   position: relative;
-  padding-bottom: 4rem;
 }
 
+/* Small adjustments for timeline layout */
 .timeline-item:last-child {
-  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.brand-logo {
+  width: 26px;
+  height: 26px;
+  border-radius: 2px;
+  object-fit: contain;
 }
 
 .timeline-item:last-child .marker-line {
@@ -39,7 +46,7 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,9 +57,21 @@
 }
 
 /* Base icon colors */
-.icon-bg-orange { color: #f97316; }
-.icon-bg-purple { color: #d946ef; }
-.icon-bg-blue   { color: #3b82f6; }
+.icon-bg-orange { 
+  color: #f97316; 
+  border-color: #78350f;
+  background-color: rgba(120, 53, 15, 0.3);
+}
+.icon-bg-purple { 
+  color: #d946ef; 
+  border-color: #4c1d95;
+  background-color: rgba(76, 29, 149, 0.3); 
+}
+.icon-bg-blue   { 
+  color: #3b82f6; 
+  border-color: rgba(59, 130, 246, 0.5);
+  background-color: rgba(59, 130, 246, 0.15);
+}
 
 .marker-line {
   width: 1px;

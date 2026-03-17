@@ -51,11 +51,6 @@ const Hero = () => {
           <ArrowDown size={20} />
         </div>
       </div>
-
-      <button className="chat-btn">
-        <MessageCircle size={20} />
-        <span className="chat-btn-text">Chat with my AI twin</span>
-      </button>
     </section>
   );
 };

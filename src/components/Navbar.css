@@ -48,6 +48,12 @@
   color: var(--text-primary);
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 .theme-toggle {
   color: var(--text-secondary);
   display: flex;
@@ -77,6 +83,10 @@
 @media (max-width: 768px) {
   .nav-links {
     display: none;
+  }
+  
+  .header-actions {
+    gap: 1rem;
   }
 
   .mobile-menu-btn {
