@@ -49,8 +49,8 @@
   --glass-bg: rgba(255, 255, 255, 0.8);
   --glass-border: rgba(0, 0, 0, 0.03);
 
-  --nav-bg: transparent;
-  --nav-border: transparent;
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --nav-border: rgba(0, 0, 0, 0.05);
 
   --chat-btn-bg: #0f172a;
   --chat-btn-text: #ffffff;
@@ -73,6 +73,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

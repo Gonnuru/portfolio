@@ -4,13 +4,19 @@
   left: 0;
   width: 100%;
   height: var(--nav-height);
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
   background: var(--nav-bg);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--nav-border);
-  z-index: 1000;
-  display: flex;
-  align-items: center;
 }
 
 .nav-container {

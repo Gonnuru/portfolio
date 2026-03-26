@@ -42,7 +42,6 @@
   color: var(--text-primary);
   line-height: 1.1;
   margin-bottom: 0.25rem;
-  white-space: nowrap;
 }
 
 .contact-subtitle {
@@ -141,5 +140,13 @@
     flex-direction: column;
     width: 100%;
     max-width: 300px;
+  }
+  
+  .contact-btn-text {
+    overflow: hidden;
+  }
+  
+  .contact-btn-sub {
+    word-break: break-all;
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, FileText, ArrowDown, MessageCircle } from 'lucide-react';
+import { Mail, FileText, ArrowDown, MessageCircle, Linkedin } from 'lucide-react';
 import './Hero.css';
 
 const Hero = () => {
@@ -20,14 +20,22 @@ const Hero = () => {
         </p>
 
         <div className="hero-actions">
-          <button className="btn btn-primary">
-            <Mail size={18} />
-            Get in Touch
-          </button>
-          <button className="btn btn-secondary">
+          <a href="https://linkedin.com/in/sampathgonnuru/" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ textDecoration: 'none' }}>
+            <Linkedin size={18} />
+            LinkedIn
+          </a>
+          <a 
+            href="#work" 
+            className="btn btn-secondary" 
+            style={{ textDecoration: 'none' }}
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
             <FileText size={18} />
             View My Work
-          </button>
+          </a>
         </div>
 
         <div className="hero-stats">
